@@ -21,7 +21,7 @@ pid_params = {'Kp': 1.5, 'Ki': 0.01, 'Kd': 0.1, 'integral': 0}
 
 # === 方法1：PID控制 ===
 state = env.reset()
-for _ in range(200):  # PID测试200步
+for _ in range(200):  
     env.render()
     action = pid_control(state, pid_params)
     state, _, done, _ = env.step(action)
@@ -37,4 +37,5 @@ for _ in range(200):  # DQN测试200步
     if done: break
 
 env.close()
-        
+
+# 仅作为示例
